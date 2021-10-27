@@ -1,38 +1,356 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
+
+
 .App {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+* {
+  transition: all .5s ease-in-out;
+
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+
+
+header {
+  /* background-color: #212529; */
+  
+  height: 72px;
+  display: flex;
+  align-items: center;
+  position: -webkit-fixed;
+  position: relative;
+  z-index: 100;
+  position: fixed;
+  font-family: 'Montserrat', sans-serif;
+  
+}
+header.scrolled {
+  background: #212529;
+}
+
+nav {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  transition: background .5s ease-in-out;
+}
+.brand {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  transition: all 2s ease-in-out;
+
+}
+.logo {
+  width: 140px;
+  position: relative;
+  top: 2px;
+  margin-left: 110px;
+}
+
+.top-logo {
+  width: 200px;
+  position: relative;
+  top: 20px;
+}
+.top-links {
+  position: relative;
+  top: 15px
+}
+ul {
+  display: flex;
+  margin-left: auto;
+  list-style-type: none;
+  gap: 2em;
+  margin-right: 115px;
+
+}
+li a {
+  color: white;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 0.95rem;
+  color: #fff;
+  letter-spacing: 0.0625em;  
+}
+
+li a:hover {
+  color: #FDC600;
+}
+
+li a:active {
+  color: #FDC600;
+}
+
+/* =============
+      HERO
+============= */
+
+.hero {
+  width: 100%;
+  height: 94vh;
+  background-image: url('images/hero-bg.jpg');
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-position: center center;
+  background-size: cover;
+}
+
+.hero-bg {
+  width: 100%;
+  position: relative;
+  
+}
+.hero-text {
+  width: 100%;
   display: flex;
   flex-direction: column;
+  text-align: center;
+  color: white;
+  position: relative;
+  top: 195px;
+  align-items: center;
+}
+.hero-text-1 {
+  font-style: italic;
+  margin-bottom: 5px;
+  font-size: 2.24rem;
+  font-family: 'Roboto Slab', serif;
+  font-weight: 300;
+  position: relative;
+  top: 40px;
+
+}
+.hero-text-2 {
+  font-size: 4.5rem;
+  font-weight: 900;
+  line-height: 4.5rem;
+  font-family: 'Montserrat', sans-serif;
+  margin-bottom: 1px;
+  position: relative;
+  top: 2px; 
+}
+button {
+  background-color: #FDC600;
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+  padding: 23px 41px;
+  font-size: 1.125rem;
+  font-weight: 700;
+  border-radius: 5px;
+  border: none;
+  position: relative;
+  top: 68px;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+
+
+/* =============
+    SERVICES
+============= */
+
+.services {
+  height: 71vh;
+  padding-top: 5%;
+}
+.services-container {
+  width: 85%;
+  margin: 0 auto;
+  height: 100%;
+}
+.title-row {
+  width: 100%;
+  text-align: center;
+}
+.title-row h1 {
+  text-transform: uppercase;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2.4em;
+  margin-bottom: 16px;
+}
+.title-row p {
+  font-family: 'Roboto Slab', serif;
+  font-style: italic;
+  color: #6c757d;
+  margin-bottom: 60px;
+}
+.service-details {
+  display: flex;
+
+}
+
+.box {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.box h1 {
+  font-family: 'Montserrat', sans-serif;
+  margin-bottom: 5px;
+}
+
+.box p {
+  font-family: 'Roboto Slab', serif;
+  color: #6c757d;
+  line-height: 1.75;
+}
+
+.icon-circle {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background-color: #FDC600;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  margin-bottom: 5px;
+}
+
+.fa-lock {
+  max-width: 60px;
+}
+
+svg {
+  max-width: 75px;
+}
+
+/* =============
+    PORTFOLIO
+============= */
+
+.portfolio {
+  padding-top: 6%;
+  width: 100vw;
+  height: auto;
+  background-color: #F8F9FA;
+  padding-bottom: 5%;
+}
+
+.row-1, .row-2 {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-bottom: 20px;
+}
+
+.project-box {
+  width: 400px;
+  height: 400px;
+  position: relative;
+}
+
+.img-container {
+  width: 450px;
+  height: 300px;
+  display: flex;
+}
+
+.img-container:hover {
+  cursor: pointer;
+  opacity: 0.75;
+}
+
+.project-box-name {
+  text-align: center;
+  background-color: white;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  
+}
+
+.project-box-name h1 {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.project-box-name p {
+  font-family: 'Roboto Slab', serif;
+  color: #6c757d;
+  font-style: italic;
+}
+
+
+/* =============
+    ABOUT
+============= */
+
+.about {
+  height: 100vh;
+  padding: 5% 12%;
+}
+
+.about-box {
+  border: 1px solid red;
+  width: 40%;
+  position: relative;
+}
+
+.about-text {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid lime;
+  height: 100px;
+  width: 100%;
+  
+
+}
+
+.about-left-text {
+  margin-left: auto;
+}
+
+.about-2, .about-4 {
+  border: 1px solid red;
+  width: 40%;
+  margin-left: auto;
+}
+
+.about-circle {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  background-color: #E9ECEF;
+  position: absolute;
+  right: -42%;
+  top: 12%;
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.about-circle img {
+  width: 90%;
+  border-radius: 50%;
+  border: 1px solid #FDC600
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.left-cirle {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  background-color: #E9ECEF;
+  position: absolute;
+  left: 42%;
+  top: 12%;
 }
